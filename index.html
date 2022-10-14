@@ -35,13 +35,13 @@
         <img src="https://i.postimg.cc/9MRBbWgr/super-man.png" alt="superman lego">
       </section>
       <section class="footer">
-        <div>
+        <div class="btn-superhero">
           <img src="https://i.postimg.cc/bw8MYF3s/spiderman.png" alt="spiderman lego">
         </div>
-        <div>
+        <div class="btn-superhero">
           <img src="https://i.postimg.cc/MK1NS80C/robin.png" alt="robin lego">
         </div>
-        <div>
+        <div class="btn-superhero">
           <img src="https://i.postimg.cc/7PFddLz1/batman.webp" alt="batman lego">
         </div>
       </section>
@@ -52,7 +52,43 @@
       <div></div>
       <div></div>
     </section>
-    <section></section>
+    <section class="modal hidden">
+      <div class="modal__content">
+        <img class="modal__content--close" src="https://img.icons8.com/windows/32/000000/macos-close.png" alt="">
+        <div class="modal__content--slider">
+          <input type="radio" name="slider-1" id="radio-1" checked>
+          <input type="radio" name="slider-1" id="radio-2">
+          <input type="radio" name="slider-1" id="radio-3">
+          <div class="cards">
+            <label for="radio-1" id="card-1" class="card">
+              <img src="https://i.postimg.cc/nczL85xG/spiderman1.png" alt="">
+            </label>
+            <label for="radio-2" id="card-2" class="card">
+              <img src="https://i.postimg.cc/3r9wchsw-/spiderman2.png" alt="">
+            </label>
+            <label for="radio-3" id="card-3" class="card">
+              <img src="https://i.postimg.cc/GtMh8PFD/spiderman3.png" alt="">
+            </label>
+          </div>
+        </div>
+        <button class="modal__content--buy">Lo quiero!</button>
+      </div>
+    </section>
   </div>
 </body>
+<script>
+  const btn_superhero = document.querySelectorAll('.btn-superhero');
+  const modal = document.querySelector('.modal');
+  const closeButton = document.querySelector('.modal__content--close');
+
+  for (let i = 0; i < btn_superhero.length; i++) {
+    btn_superhero[i].addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  })
+  }
+
+  closeButton.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  })
+</script>
 </html>
