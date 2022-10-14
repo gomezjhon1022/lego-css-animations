@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/tablet.css" media="(max-width: 900px)"/>
+  <link rel="stylesheet" href="./styles/phone.css" media="(max-width: 620px)"/>
   <title>Document</title>
 </head>
 <body>
@@ -16,12 +18,15 @@
       <nav class="navbar">
         <div class="navbar__content">
           <img src="https://i.postimg.cc/yNKtQCRQ/lego.png" alt="icono lego">
-          <ul>
-            <li><a href="/">EXCLUSIVOS</a></li>
-            <li><a href="/">NUEVOS</a></li>
-            <li><a href="/">GIFT CARDS</a></li>
-            <li><a href="/">FIND A STORE</a></li>
-          </ul>
+          <div class="navbar__menu">
+            <ul>
+              <li><a href="#">EXCLUSIVOS</a></li>
+              <li><a href="#">NUEVOS</a></li>
+              <li><a href="#">GIFT CARDS</a></li>
+              <li><a href="#">FIND A STORE</a></li>
+            </ul>
+            <a class="toggle__menu">Menú</a>
+          </div>
         </div>
       </nav>
       <section class="main-content">
